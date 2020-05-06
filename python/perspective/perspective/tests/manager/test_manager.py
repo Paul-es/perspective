@@ -372,7 +372,7 @@ class TestPerspectiveManager(object):
     def test_manager_on_update(self, sentinel):
         s = sentinel(0)
 
-        def update_callback():
+        def update_callback(port_id):
             s.set(s.get() + 1)
 
         # create a table and view using manager
@@ -396,7 +396,7 @@ class TestPerspectiveManager(object):
     def test_manager_remove_update(self, sentinel):
         s = sentinel(0)
 
-        def update_callback():
+        def update_callback(port_id):
             s.set(s.get() + 1)
 
         # create a table and view using manager
